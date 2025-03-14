@@ -12,18 +12,27 @@
             />
 
         <FlexLayout>
+                
+                <Image
+                    Source="trefle.jpg"
+                    HeightRequest="185"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="Just a beautiful trefle" />
             <Image
-                 Source="trefle.jpg"
-                 HeightRequest="185"
-                 Aspect="AspectFit"
-                 SemanticProperties.Description="Just a beautiful trefle" />
-            <Image
-                Source="leprechaun.jpg"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="Just a beautiful leprechaun" />
+                    Source="leprechaun.jpg"
+                    HeightRequest="185"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="Just a beautiful leprechaun" />
         </FlexLayout>
-        
-        
+
+
+        <Button 
+                Text="Click me"
+             />
+        <WebView Source="https://www.youtube.com/embed/uSOOO3KBKDY?si=pIblRT-cJlBLsbEQ" HeightRequest="300"/>
+
+
+
+
     </VerticalStackLayout>
 </ContentPage>
