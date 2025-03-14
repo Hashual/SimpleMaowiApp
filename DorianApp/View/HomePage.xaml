@@ -5,11 +5,25 @@
              Title="HomePage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to DorianApp!"
+            Text="Welcome to the HomePage !"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             FontSize="Large"
-
             />
+
+        <FlexLayout>
+            <Image
+                 Source="trefle.jpg"
+                 HeightRequest="185"
+                 Aspect="AspectFit"
+                 SemanticProperties.Description="Just a beautiful trefle" />
+            <Image
+                Source="leprechaun.jpg"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Just a beautiful leprechaun" />
+        </FlexLayout>
+        
+        
     </VerticalStackLayout>
 </ContentPage>
