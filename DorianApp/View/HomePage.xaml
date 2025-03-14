@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DorianApp.HomePage"
-             Title="HomePage">
+             x:Class="DorianApp.HomePage">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
     <VerticalStackLayout>
         <Label 
             Text="Welcome to the HomePage !"
@@ -10,24 +12,33 @@
             HorizontalOptions="Center"
             FontSize="Large"
             />
+        <Label
+            Text="You can fin here plenty of stuff about plants"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="Medium"
+            />
 
         <FlexLayout>
                 
-                <Image
+            <Image
                     Source="trefle.jpg"
-                    HeightRequest="185"
+                    HeightRequest="200"
                     Aspect="AspectFit"
                     SemanticProperties.Description="Just a beautiful trefle" />
             <Image
                     Source="leprechaun.jpg"
-                    HeightRequest="185"
+                    HeightRequest="200"
                     Aspect="AspectFit"
                     SemanticProperties.Description="Just a beautiful leprechaun" />
         </FlexLayout>
 
 
         <Button 
-                Text="Click me"
+                Text="Navigate to Gif"
+                Clicked="OnButtonClicked"
+                Padding="10"
+                Margin="5,10,5,10"
              />
         <WebView Source="https://www.youtube.com/embed/uSOOO3KBKDY?si=pIblRT-cJlBLsbEQ" HeightRequest="300"/>
 

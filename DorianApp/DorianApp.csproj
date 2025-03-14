@@ -78,6 +78,9 @@
 	  <Compile Update="View\AddPage.xaml.cs">
 	    <DependentUpon>AddPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="View\GifPage.xaml.cs">
+	    <DependentUpon>GifPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="View\SearchPage.xaml.cs">
 	    <DependentUpon>SearchPage.xaml</DependentUpon>
 	  </Compile>
@@ -91,6 +94,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\AddPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\GifPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\SearchPage.xaml">

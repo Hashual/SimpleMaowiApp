@@ -8,7 +8,6 @@
     <TabBar>
         <Tab Title="Home" Icon="home.png">
             <ShellContent
-                Title="Home"
                 ContentTemplate="{DataTemplate local:HomePage}"
                 Route="View/HomePage" />
         </Tab>
