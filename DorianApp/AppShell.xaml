@@ -8,28 +8,27 @@
     <TabBar>
         <Tab Title="Home" Icon="home.png">
             <ShellContent
-                Title="Home"
-                ContentTemplate="{DataTemplate local:MainPage}"
-                Route="MainPage" />
+                ContentTemplate="{DataTemplate local:HomePage}"
+                Route="View/HomePage" />
         </Tab>
         <Tab Title="Infos" Icon="info.png">
             <ShellContent
                 Title="Infos"
-                ContentTemplate="{DataTemplate local:MainPage}"
-                Route="MainPage" />
+                ContentTemplate="{DataTemplate local:InfoPage}"
+                Route="View/InfoPage" />
         </Tab>
         <Tab Title="Add" Icon="add.png">
             <ShellContent
                 Title="Add"
-                ContentTemplate="{DataTemplate local:MainPage}"
-                Route="MainPage" />
+                ContentTemplate="{DataTemplate local:AddPage}"
+                Route="View/AddPage" />
 
         </Tab>
         <Tab Title="Search" Icon="search.png">
             <ShellContent
                 Title="Search"
-                ContentTemplate="{DataTemplate local:MainPage}"
-                Route="MainPage" />
+                ContentTemplate="{DataTemplate local:SearchPage}"
+                Route="View/SearchPage" />
 
         </Tab>
 
