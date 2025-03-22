@@ -14,5 +14,11 @@ namespace DorianApp
             scientificNameLabel.Text = $"Nom scientifique : {plant.ScientificName}";
         }
 
+        private void OnBackButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new InfoPage());
+
+        }
+
     }
 }

@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DorianApp.InfoPage"
              Title="InfoPage">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
     <ScrollView>
         <VerticalStackLayout Spacing="10" Padding="10">
             <Label 
