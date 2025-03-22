@@ -39,7 +39,8 @@ namespace DorianApp.Services
                             ImageUrl = plant["image_url"]?.ToString() ?? "",
                             Description = plant["bibliography"]?.ToString() ??
                                         plant["scientific_name"]?.ToString() ??
-                                        "Pas de description disponible"
+                                        "Pas de description disponible",
+                            ScientificName = plant["scientific_name"]?.ToString() ?? "Nom scientifique inconnu"
                         });
                     }
                 }

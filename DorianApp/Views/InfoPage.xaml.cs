@@ -16,7 +16,7 @@ namespace DorianApp
             InitializeComponent();
             _trefleApiService = new TrefleApiService();
             Plants = new ObservableCollection<Plant>();
-            BindingContext = this; // Définit le contexte de binding pour la CollectionView
+            BindingContext = this;
             LoadPlants();
         }
 
@@ -26,6 +26,15 @@ namespace DorianApp
             foreach (var plant in plants)
             {
                 Plants.Add(plant);
+            }
+        }
+
+        private async void OnPlantSelected(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.FirstOrDefault() is Plant selectedPlant)
+            {
+                await Navigation.PushAsync(new PlantDetailPage(selectedPlant));
+                plantsCollectionView.SelectedItem = null;
             }
         }
     }

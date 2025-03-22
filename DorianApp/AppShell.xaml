@@ -22,16 +22,12 @@
                 Title="Add"
                 ContentTemplate="{DataTemplate local:AddPage}"
                 Route="View/AddPage" />
-
         </Tab>
         <Tab Title="Search" Icon="search.png">
             <ShellContent
                 Title="Search"
                 ContentTemplate="{DataTemplate local:SearchPage}"
                 Route="View/SearchPage" />
-
         </Tab>
-
     </TabBar>
-
-</Shell>    
+</Shell>

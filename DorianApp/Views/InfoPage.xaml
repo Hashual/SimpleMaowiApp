@@ -12,8 +12,8 @@
 
             <CollectionView x:Name="plantsCollectionView"
                            ItemsSource="{Binding Plants}"
-                           SelectionMode="None"
-                           HorizontalOptions="Center">
+                           SelectionMode="Single"
+                           SelectionChanged="OnPlantSelected">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout Spacing="5" Padding="10">
