@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using DorianApp.Models;
 using System.Collections.ObjectModel;
 
-namespace DorianApp
+namespace DorianApp.Views
 {
     public partial class InfoPage : ContentPage
     {

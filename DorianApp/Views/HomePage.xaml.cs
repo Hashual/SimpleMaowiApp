@@ -1,16 +1,9 @@
-using DorianApp.View;
+namespace DorianApp.Views;
 
-namespace DorianApp;
 public partial class HomePage : ContentPage
 {
-	public HomePage()
-	{
-		InitializeComponent();
-	}
-
-    async void OnButtonClicked(object sender, EventArgs e)
+    public HomePage()
     {
-        await Navigation.PushAsync(new GifPage());
-        
+        InitializeComponent();
     }
 }

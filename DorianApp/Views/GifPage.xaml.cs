@@ -1,4 +1,4 @@
-namespace DorianApp.View;
+namespace DorianApp.Views;
 
 public partial class GifPage : ContentPage
 {
