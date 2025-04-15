@@ -27,9 +27,10 @@ public static class MauiProgram
 
         // Enregistrement des ViewModels
         builder.Services.AddTransient<HomePageViewModel>();
+        builder.Services.AddTransient<GifPageViewModel>(); // Ajout pour GifPage
 
         // Enregistrement des services
-        builder.Services.AddSingleton<TrefleApiService>();
+        builder.Services.AddSingleton<TrefleApiService>(); // Nom corrigé
 
 #if DEBUG
         builder.Logging.AddDebug();
