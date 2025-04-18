@@ -2,13 +2,33 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DorianApp.Views.AddPage"
-             Title="AddPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to AddPage!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            FontSize="Large"
-            />
-    </VerticalStackLayout>
+             Title="Ajouter une plante">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <Label Text="Ajouter une nouvelle plante"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Entry Placeholder="Nom commun"
+                   Text="{Binding CommonName}"
+                   FontSize="Medium"/>
+            <Entry Placeholder="URL de l'image"
+                   Text="{Binding ImageUrl}"
+                   FontSize="Medium"/>
+            <Entry Placeholder="Description"
+                   Text="{Binding Description}"
+                   FontSize="Medium"/>
+            <Entry Placeholder="Nom scientifique"
+                   Text="{Binding ScientificName}"
+                   FontSize="Medium"/>
+
+            <Button Text="Ajouter la plante"
+                    Command="{Binding AddPlantCommand}"
+                    HorizontalOptions="Center"/>
+            <Button Text="Annuler"
+                    Command="{Binding CancelCommand}"
+                    HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
