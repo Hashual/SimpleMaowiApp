@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DorianApp.HomePage">
+             xmlns:viewmodels="clr-namespace:DorianApp.ViewModels"
+             x:Class="DorianApp.Views.HomePage">
+    <ContentPage.BindingContext>
+        <viewmodels:HomePageViewModel />
+    </ContentPage.BindingContext>
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False" />
     </Shell.BackButtonBehavior>
@@ -10,40 +14,32 @@
             Text="Welcome to the HomePage !"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
-            FontSize="Large"
-            />
+            FontSize="Large" />
         <Label
-            Text="You can fin here plenty of stuff about plants"
+            Text="You can find here plenty of stuff about plants"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            FontSize="Medium"
-            />
+            FontSize="Medium" />
 
         <FlexLayout>
-                
             <Image
-                    Source="trefle.jpg"
-                    HeightRequest="200"
-                    Aspect="AspectFit"
-                    SemanticProperties.Description="Just a beautiful trefle" />
+                Source="trefle.jpg"
+                HeightRequest="200"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Just a beautiful trefle" />
             <Image
-                    Source="leprechaun.jpg"
-                    HeightRequest="200"
-                    Aspect="AspectFit"
-                    SemanticProperties.Description="Just a beautiful leprechaun" />
+                Source="leprechaun.jpg"
+                HeightRequest="200"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Just a beautiful leprechaun" />
         </FlexLayout>
 
-
         <Button 
-                Text="Navigate to Gif"
-                Clicked="OnButtonClicked"
-                Padding="10"
-                Margin="5,10,5,10"
-             />
-        <WebView Source="https://www.youtube.com/embed/uSOOO3KBKDY?si=pIblRT-cJlBLsbEQ" HeightRequest="300"/>
+            Text="Navigate to Gif"
+            Command="{Binding NavigateToGifCommand}"
+            Padding="10"
+            Margin="5,10,5,10" />
 
-
-
-
+        <WebView Source="https://www.youtube.com/embed/uSOOO3KBKDY?si=pIblRT-cJlBLsbEQ" HeightRequest="300" />
     </VerticalStackLayout>
 </ContentPage>

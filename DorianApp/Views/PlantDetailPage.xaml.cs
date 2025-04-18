@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 using DorianApp.Models;
 
-namespace DorianApp
+namespace DorianApp.Views
 {
     public partial class PlantDetailPage : ContentPage
     {

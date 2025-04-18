@@ -1,4 +1,4 @@
-namespace DorianApp;
+namespace DorianApp.Views;
 
 public partial class SearchPage : ContentPage
 {
