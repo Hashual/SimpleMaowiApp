@@ -4,7 +4,6 @@ using System.Windows.Input;
 using DorianApp.Models;
 using DorianApp.Services;
 using DorianApp.Views;
-using Microsoft.Maui.Controls;
 
 namespace DorianApp.ViewModels
 {
@@ -40,10 +39,33 @@ namespace DorianApp.ViewModels
             LoadPlantsAsync();
         }
 
+        public async void RefreshPlants()
+        {
+            Plants.Clear();
+
+            var apiPlants = await _trefleApiService.GetPlantsAsync();
+            foreach (var plant in apiPlants)
+            {
+                Plants.Add(plant);
+            }
+
+            var userPlants = PlantDataStore.GetPlants();
+            foreach (var plant in userPlants)
+            {
+                Plants.Add(plant);
+            }
+        }
+
         private async void LoadPlantsAsync()
         {
-            var plants = await _trefleApiService.GetPlantsAsync();
-            foreach (var plant in plants)
+            var apiPlants = await _trefleApiService.GetPlantsAsync();
+            foreach (var plant in apiPlants)
+            {
+                Plants.Add(plant);
+            }
+
+            var userPlants = PlantDataStore.GetPlants();
+            foreach (var plant in userPlants)
             {
                 Plants.Add(plant);
             }
