@@ -1,5 +1,5 @@
-using Microsoft.Maui.Controls;
 using DorianApp.Models;
+using DorianApp.ViewModels;
 
 namespace DorianApp.Views
 {
@@ -8,17 +8,12 @@ namespace DorianApp.Views
         public PlantDetailPage(Plant plant)
         {
             InitializeComponent();
-            titleLabel.Text = plant.CommonName;
-            plantImage.Source = plant.ImageUrl;
-            descriptionLabel.Text = $"Description : {plant.Description}";
-            scientificNameLabel.Text = $"Nom scientifique : {plant.ScientificName}";
+            BindingContext = new PlantDetailPageViewModel(plant);
         }
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new InfoPage());
-
         }
-
     }
 }
