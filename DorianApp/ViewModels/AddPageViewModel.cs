@@ -1,7 +1,6 @@
 using System.ComponentModel;
 using System.Windows.Input;
 using DorianApp.Models;
-using Microsoft.Maui.Controls;
 using DorianApp.Services;
 
 namespace DorianApp.ViewModels
@@ -53,6 +52,8 @@ namespace DorianApp.ViewModels
                 };
 
                 PlantDataStore.AddPlant(newPlant);
+
+                MessagingCenter.Send(this, "PlantAdded", newPlant);
 
                 await Application.Current.MainPage.DisplayAlert("Confirmation", $"Plante ajoutée : {newPlant.CommonName}", "OK");
 
