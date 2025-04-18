@@ -2,13 +2,45 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DorianApp.Views.SearchPage"
-             Title="SearchPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to SearchPage"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            FontSize="Large"
-        />
-    </VerticalStackLayout>
+             Title="Rechercher">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <Label Text="Rechercher une plante"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+
+            <Button Text="Afficher une plante aléatoire"
+                    Command="{Binding ShowRandomPlantCommand}"
+                    HorizontalOptions="Center"/>
+
+            <Frame IsVisible="{Binding IsPlantVisible}"
+                   BorderColor="LightGray"
+                   Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="{Binding SelectedPlant.CommonName}"
+                           FontSize="Medium"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"/>
+                    <Image Source="{Binding SelectedPlant.ImageUrl}"
+                           HeightRequest="150"
+                           WidthRequest="150"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{Binding SelectedPlant.Description}"
+                           FontSize="Small"
+                           TextColor="Gray"
+                           MaximumWidthRequest="300"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="Center"/>
+                    <Label Text="{Binding SelectedPlant.ScientificName}"
+                           FontSize="Small"
+                           FontAttributes="Italic"
+                           TextColor="Gray"
+                           MaximumWidthRequest="300"
+                           LineBreakMode="WordWrap"
+                           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -1,9 +1,13 @@
-namespace DorianApp.Views;
+using DorianApp.ViewModels;
 
-public partial class SearchPage : ContentPage
+namespace DorianApp.Views
 {
-	public SearchPage()
-	{
-		InitializeComponent();
-	}
+    public partial class SearchPage : ContentPage
+    {
+        public SearchPage()
+        {
+            InitializeComponent();
+            BindingContext = new SearchPageViewModel();
+        }
+    }
 }
