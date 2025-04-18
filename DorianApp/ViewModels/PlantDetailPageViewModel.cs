@@ -1,7 +1,6 @@
 using System.ComponentModel;
 using System.Windows.Input;
 using DorianApp.Models;
-using Microsoft.Maui.Controls;
 
 namespace DorianApp.ViewModels
 {

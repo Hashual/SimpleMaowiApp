@@ -11,12 +11,12 @@
     </Shell.BackButtonBehavior>
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to the HomePage !"
+            Text="Bienvenue sur la HomePage !"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             FontSize="Large" />
         <Label
-            Text="You can find here plenty of stuff about plants"
+            Text="Tu peux trouver pleins de choses sur les plantes"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             FontSize="Medium" />
@@ -26,16 +26,16 @@
                 Source="trefle.jpg"
                 HeightRequest="200"
                 Aspect="AspectFit"
-                SemanticProperties.Description="Just a beautiful trefle" />
+                SemanticProperties.Description="Juste un beau trefle" />
             <Image
                 Source="leprechaun.jpg"
                 HeightRequest="200"
                 Aspect="AspectFit"
-                SemanticProperties.Description="Just a beautiful leprechaun" />
+                SemanticProperties.Description="Juste un beau leprechaun" />
         </FlexLayout>
 
         <Button 
-            Text="Navigate to Gif"
+            Text="Aller au Gif"
             Command="{Binding NavigateToGifCommand}"
             Padding="10"
             Margin="5,10,5,10" />

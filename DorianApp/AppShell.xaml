@@ -6,7 +6,7 @@
     xmlns:views="clr-namespace:DorianApp.Views"
     Title="DorianApp">
     <TabBar>
-        <Tab Title="Home" Icon="home.png">
+        <Tab Title="Accueil" Icon="home.png">
             <ShellContent
                 ContentTemplate="{DataTemplate views:HomePage}"
                 Route="HomePage" />
@@ -17,13 +17,13 @@
                 ContentTemplate="{DataTemplate views:InfoPage}"
                 Route="InfoPage" />
         </Tab>
-        <Tab Title="Add" Icon="add.png">
+        <Tab Title="Ajouter" Icon="add.png">
             <ShellContent
                 Title="Add"
                 ContentTemplate="{DataTemplate views:AddPage}"
                 Route="AddPage" />
         </Tab>
-        <Tab Title="Search" Icon="search.png">
+        <Tab Title="Rechercher" Icon="search.png">
             <ShellContent
                 Title="Search"
                 ContentTemplate="{DataTemplate views:SearchPage}"
