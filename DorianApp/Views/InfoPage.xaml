@@ -14,28 +14,30 @@
                 FontSize="Large"
                 HorizontalOptions="Start"/>
 
-            <CollectionView x:Name="plantsCollectionView"
-                           ItemsSource="{Binding Plants}"
-                           SelectionMode="Single"
-                           SelectionChanged="OnPlantSelected">
+            <CollectionView ItemsSource="{Binding Plants}"
+                           SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout Spacing="5" Padding="10">
                             <Label Text="{Binding CommonName}"
-                                  FontSize="Medium"
-                                  FontAttributes="Bold"
-                                  HorizontalOptions="Center"/>
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"/>
                             <Image Source="{Binding ImageUrl}"
-                                  HeightRequest="150"
-                                  WidthRequest="150"
-                                  HorizontalOptions="Center"/>
+                                   HeightRequest="150"
+                                   WidthRequest="150"
+                                   HorizontalOptions="Center"/>
                             <Label Text="{Binding Description}"
-                                  FontSize="Small"
-                                  TextColor="Gray"
-                                  MaximumWidthRequest="300"
-                                  LineBreakMode="WordWrap"
-                                  HorizontalOptions="Center"/>
+                                   FontSize="Small"
+                                   TextColor="Gray"
+                                   MaximumWidthRequest="300"
+                                   LineBreakMode="WordWrap"
+                                   HorizontalOptions="Center"/>
                             <BoxView HeightRequest="1" Color="LightGray"/>
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.PlantSelectedCommand}"
+                                                      CommandParameter="{Binding .}"/>
+                            </VerticalStackLayout.GestureRecognizers>
                         </VerticalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

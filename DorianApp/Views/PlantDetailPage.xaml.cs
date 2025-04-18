@@ -13,7 +13,7 @@ namespace DorianApp.Views
 
         private void OnBackButtonClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new InfoPage());
+            Navigation.PopAsync();
         }
     }
 }

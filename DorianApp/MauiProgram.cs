@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using DorianApp.Views; // Ajout pour les pages
-using DorianApp.ViewModels; // Ajout pour les ViewModels
-using DorianApp.Services; // Ajout pour les services
+using DorianApp.Views;
+using DorianApp.ViewModels;
+using DorianApp.Services;
+using DorianApp.Models;
 
 namespace DorianApp;
 
@@ -27,10 +28,12 @@ public static class MauiProgram
 
         // Enregistrement des ViewModels
         builder.Services.AddTransient<HomePageViewModel>();
-        builder.Services.AddTransient<GifPageViewModel>(); // Ajout pour GifPage
+        builder.Services.AddTransient<GifPageViewModel>();
 
         // Enregistrement des services
-        builder.Services.AddSingleton<TrefleApiService>(); // Nom corrigé
+        builder.Services.AddSingleton<TrefleApiService>();
+        builder.Services.AddTransient<Plant>();
+
 
 #if DEBUG
         builder.Logging.AddDebug();
