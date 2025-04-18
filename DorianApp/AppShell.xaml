@@ -3,35 +3,31 @@
     x:Class="DorianApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:DorianApp"
+    xmlns:views="clr-namespace:DorianApp.Views"
     Title="DorianApp">
     <TabBar>
         <Tab Title="Home" Icon="home.png">
             <ShellContent
-                ContentTemplate="{DataTemplate local:HomePage}"
-                Route="View/HomePage" />
+                ContentTemplate="{DataTemplate views:HomePage}"
+                Route="HomePage" />
         </Tab>
         <Tab Title="Infos" Icon="info.png">
             <ShellContent
                 Title="Infos"
-                ContentTemplate="{DataTemplate local:InfoPage}"
-                Route="View/InfoPage" />
+                ContentTemplate="{DataTemplate views:InfoPage}"
+                Route="InfoPage" />
         </Tab>
         <Tab Title="Add" Icon="add.png">
             <ShellContent
                 Title="Add"
-                ContentTemplate="{DataTemplate local:AddPage}"
-                Route="View/AddPage" />
-
+                ContentTemplate="{DataTemplate views:AddPage}"
+                Route="AddPage" />
         </Tab>
         <Tab Title="Search" Icon="search.png">
             <ShellContent
                 Title="Search"
-                ContentTemplate="{DataTemplate local:SearchPage}"
-                Route="View/SearchPage" />
-
+                ContentTemplate="{DataTemplate views:SearchPage}"
+                Route="SearchPage" />
         </Tab>
-
     </TabBar>
-
-</Shell>    
+</Shell>

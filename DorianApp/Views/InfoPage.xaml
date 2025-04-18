@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DorianApp.Views.InfoPage"
+             Title="InfoPage">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="10">
+            <Label 
+                Text="Liste des plantes"
+                FontSize="Large"
+                HorizontalOptions="Start"/>
+
+            <CollectionView ItemsSource="{Binding Plants}"
+                           SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="5" Padding="10">
+                            <Label Text="{Binding CommonName}"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"/>
+                            <Image Source="{Binding ImageUrl}"
+                                   HeightRequest="150"
+                                   WidthRequest="150"
+                                   HorizontalOptions="Center"/>
+                            <Label Text="{Binding Description}"
+                                   FontSize="Small"
+                                   TextColor="Gray"
+                                   MaximumWidthRequest="300"
+                                   LineBreakMode="WordWrap"
+                                   HorizontalOptions="Center"/>
+                            <BoxView HeightRequest="1" Color="LightGray"/>
+                            <VerticalStackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.PlantSelectedCommand}"
+                                                      CommandParameter="{Binding .}"/>
+                            </VerticalStackLayout.GestureRecognizers>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

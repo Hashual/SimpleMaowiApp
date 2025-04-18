@@ -1,12 +1,13 @@
-using Microsoft.Maui.Controls;
+using DorianApp.ViewModels;
 
-namespace DorianApp
+namespace DorianApp.Views
 {
     public partial class InfoPage : ContentPage
     {
         public InfoPage()
         {
             InitializeComponent();
+            BindingContext = new InfoPageViewModel();
         }
     }
 }

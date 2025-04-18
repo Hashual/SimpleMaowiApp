@@ -60,46 +60,49 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="6.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.50" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="MainPage.xaml.cs">
-	    <DependentUpon>MainPage.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="View\HomePage.xaml.cs">
+	  <Compile Update="Views\HomePage.xaml.cs">
 	    <DependentUpon>HomePage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\InfoPage.xaml.cs">
+	  <Compile Update="Views\InfoPage.xaml.cs">
 	    <DependentUpon>InfoPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\AddPage.xaml.cs">
+	  <Compile Update="Views\AddPage.xaml.cs">
 	    <DependentUpon>AddPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\GifPage.xaml.cs">
+	  <Compile Update="Views\GifPage.xaml.cs">
 	    <DependentUpon>GifPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="View\SearchPage.xaml.cs">
+	  <Compile Update="Views\PlantDetailPage.xaml.cs">
+	    <DependentUpon>PlantDetailPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\SearchPage.xaml.cs">
 	    <DependentUpon>SearchPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\HomePage.xaml">
+	  <MauiXaml Update="Views\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\InfoPage.xaml">
+	  <MauiXaml Update="Views\InfoPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\AddPage.xaml">
+	  <MauiXaml Update="Views\AddPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\GifPage.xaml">
+	  <MauiXaml Update="Views\GifPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\SearchPage.xaml">
+	  <MauiXaml Update="Views\PlantDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

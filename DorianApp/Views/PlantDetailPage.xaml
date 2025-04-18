@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DorianApp.Views.PlantDetailPage"
+             Title="Détails de la plante">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" />
+    </Shell.BackButtonBehavior>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+            <Label Text="{Binding CommonName}"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Image Source="{Binding ImageUrl}"
+                   HeightRequest="300"
+                   WidthRequest="300"
+                   HorizontalOptions="Center"/>
+            <Label Text="{Binding Description}"
+                   FontSize="Medium"
+                   MaximumWidthRequest="350"
+                   LineBreakMode="WordWrap"/>
+            <Label Text="{Binding ScientificName}"
+                   FontSize="Small"
+                   FontAttributes="Italic"
+                   TextColor="Gray"
+                   MaximumWidthRequest="350"
+                   LineBreakMode="WordWrap"/>
+            <Button Text="Retour à la liste"
+                    Clicked="OnBackButtonClicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
