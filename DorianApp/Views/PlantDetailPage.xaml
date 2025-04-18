@@ -7,29 +7,28 @@
     <Shell.BackButtonBehavior>
         <BackButtonBehavior IsVisible="False" />
     </Shell.BackButtonBehavior>
-    
+
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="20">
-            <Label x:Name="titleLabel"
+            <Label Text="{Binding CommonName}"
                    FontSize="Large"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"/>
-            <Image x:Name="plantImage"
+            <Image Source="{Binding ImageUrl}"
                    HeightRequest="300"
                    WidthRequest="300"
                    HorizontalOptions="Center"/>
-            <Label x:Name="descriptionLabel"
+            <Label Text="{Binding Description}"
                    FontSize="Medium"
                    MaximumWidthRequest="350"
                    LineBreakMode="WordWrap"/>
-            <Label x:Name="scientificNameLabel"
+            <Label Text="{Binding ScientificName}"
                    FontSize="Small"
                    FontAttributes="Italic"
                    TextColor="Gray"
                    MaximumWidthRequest="350"
                    LineBreakMode="WordWrap"/>
-            <Button x:Name="backButton"
-                    Text="Retour à la liste"
+            <Button Text="Retour à la liste"
                     Clicked="OnBackButtonClicked"
                     HorizontalOptions="Center"
                     VerticalOptions="End"/>

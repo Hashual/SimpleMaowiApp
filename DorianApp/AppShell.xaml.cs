@@ -8,6 +8,7 @@ namespace DorianApp
         {
             InitializeComponent();
             Routing.RegisterRoute("GifPage", typeof(GifPage));
+            Routing.RegisterRoute("PlantDetailPage", typeof(PlantDetailPage));
         }
     }
 }
