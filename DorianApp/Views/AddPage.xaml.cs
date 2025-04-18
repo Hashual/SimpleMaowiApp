@@ -1,10 +1,13 @@
-namespace DorianApp.Views;
+using DorianApp.ViewModels;
 
-public partial class AddPage : ContentPage
+namespace DorianApp.Views
 {
-    public AddPage()
+    public partial class AddPage : ContentPage
     {
-        InitializeComponent();
+        public AddPage()
+        {
+            InitializeComponent();
+            BindingContext = new AddPageViewModel();
+        }
     }
 }
-
